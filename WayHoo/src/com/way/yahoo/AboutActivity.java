@@ -9,9 +9,13 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.way.ui.swipeback.SwipeBackActivity;
-import com.way.upgrade.core.CheckNewVersionListener;
-import com.way.upgrade.core.UpgradeManager;
 
+/**
+ * 添加版本更新的内容
+ * 暂时先将版本更新的内容注释掉，和我们的业务逻辑没有关系
+ * @author DistantSaviour
+ *
+ */
 public class AboutActivity extends SwipeBackActivity {
 
 	@Override
@@ -36,15 +40,15 @@ public class AboutActivity extends SwipeBackActivity {
 		} catch (final NameNotFoundException e) {
 			version.setText("?");
 		}
-		final UpgradeManager upgradeMangeer = UpgradeManager.newInstance(this);
-		upgradeMangeer.askForNewVersionFlag(new CheckNewVersionListener() {
-
-			@Override
-			public void checkNewVersion(boolean result) {
-				if (result)
-					upgradeMangeer.askForNewVersion();
-			}
-		});
+//		final UpgradeManager upgradeMangeer = UpgradeManager.newInstance(this);
+//		upgradeMangeer.askForNewVersionFlag(new CheckNewVersionListener() {
+//
+//			@Override
+//			public void checkNewVersion(boolean result) {
+//				if (result)
+//					upgradeMangeer.askForNewVersion();
+//			}
+//		});
 	}
 
 }
